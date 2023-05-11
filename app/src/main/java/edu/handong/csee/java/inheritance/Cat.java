@@ -10,17 +10,26 @@ public class Cat extends Animal {
 
     public static void main(String[] args) {
         Cat myCat = new Cat();
-        Animal myAnimal = myCat;
-        Animal.testClassMethod();
-        myAnimal.testInstanceMethod();
-       
-        Animal dog = new Dog();
-        Animal.testClassMethod();
-        dog.testInstanceMethod();
+        Animal myAnimal = myCat; // polymorphism
+        Animal.testClassMethod(); // hiding
+        // result : The static method in Animal
+        myAnimal.testInstanceMethod(); // override
+        // result : The instance method in Cat
         
-        Animal monkey = new Monkey();
-        Animal.testClassMethod();
-        monkey.testInstanceMethod();
+        
+       
+        Animal dog = new Dog(); // polymorphism
+        Animal.testClassMethod(); // hiding
+        // result : The static method in Animal
+        
+        dog.testInstanceMethod(); // override
+        // result : The instance method in Dog
+        
+        Animal monkey = new Monkey(); // polymorphism
+        Animal.testClassMethod(); // hiding
+        // result : The static method in Animal
+        monkey.testInstanceMethod(); // override
+        // result : The instance method in Monkey
         
         
     }
