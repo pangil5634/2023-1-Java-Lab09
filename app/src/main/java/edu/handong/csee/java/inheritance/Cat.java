@@ -25,6 +25,8 @@ public class Cat extends Animal {
         dog.testInstanceMethod(); // override
         // result : The instance method in Dog
         
+        
+        
         Animal monkey = new Monkey(); // polymorphism
         Animal.testClassMethod(); // hiding
         // result : The static method in Animal
